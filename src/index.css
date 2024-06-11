@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .btn-primary{
+        @apply py-3 px-8 bg-primary-dark text-white text-center rounded-[72px] cursor-pointer hover:bg-primary-dark/80 transition-colors duration-300;
+    }
+
+}

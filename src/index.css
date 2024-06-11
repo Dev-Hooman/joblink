@@ -2,10 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+.slick-slide > div {
+    margin: 0 10px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color:orange !important;
+  }
+
+  /* .slick-slide .drop-shadow {
+    box-shadow: none; 
+    transition: box-shadow 0.1s ease-in-out; 
+  }
+   */
+
+
+  
 @layer components{
 
     .btn-primary{
         @apply py-3 px-8 bg-primary-dark text-white text-center rounded-[72px] cursor-pointer hover:bg-primary-dark/80 transition-colors duration-300;
+    }
+
+    .main-layout{
+       @apply relative flex flex-col justify-center items-center space-y-4 pt-[289px] pb-[332px] px-[32px];
+    }
+
+    .main-heading{
+       @apply md:text-5xl text-3xl font-bold text-heading-clr;
+    }
+
+    .sub-heading{
+       @apply  text-primary-dark font-bold
+    }
+
+    .custom-border-dashed {
+       @apply h-[2px] w-full  absolute bottom-1 border-primary-light border border-dashed;
+    }
+
+    .getting-started-section {
+        @apply flex flex-col space-y-[150px] relative mt-[100px] pb-[150px] px-[32px];
     }
 
 }

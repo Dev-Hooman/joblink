@@ -15,7 +15,7 @@ function Navbar() {
         <Logo />
         <div className="hidden md:flex justify-center items-center space-x-[66px]">
           {links.map((linkName) => (
-            <a key={linkName} href={`/${linkName}`}>
+            <a className="font-semibold" key={linkName} href={`/${linkName}`}>
               {linkName}
             </a>
           ))}

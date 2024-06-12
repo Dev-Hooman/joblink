@@ -1,6 +1,7 @@
 import React from "react";
 import BgCover1 from "../../../assets/bg-covers/bg-cover-1.png";
 import mockVideoPlayer from "../../../assets/bg-covers/mock-video-player.png";
+import dashedLine from '../../../assets/misc/Line.png'
 
 const MainSection = () => {
   return (
@@ -25,8 +26,8 @@ const MainSection = () => {
             <img src={mockVideoPlayer} className="object-cover rounded-lg" />
           </div>
         </div>
-        <div className="custom-border-dashed" />
-      </section>
+        <img className="absolute bottom-0" src={dashedLine} alt="dashed-line"/>
+        </section>
     </>
   );
 };

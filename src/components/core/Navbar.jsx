@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Logo } from "../../icons";
+import { CrossIcon, Logo } from "../../icons";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <div className="bg-white mt-6 shadow-md shadow-gray-600 rounded-full py-[12px] px-[23px] z-40">
+    <div className="bg-white mt-6 shadow-md shadow-gray-600 rounded-full py-[12px] px-[23px] z-40 xl:mx-32 lg:mx-12 mx-4">
       <div className="flex justify-between items-center w-full px-4 md:px-0">
         <Logo />
         <div className="hidden md:flex justify-center items-center space-x-[66px]">
@@ -23,10 +23,7 @@ function Navbar() {
         <a href="/login" className="hidden md:block btn-primary">
           Login
         </a>
-        <button
-          className="md:hidden flex items-center"
-          onClick={toggleSidebar}
-        >
+        <button className="md:hidden flex items-center" onClick={toggleSidebar}>
           <svg
             className="w-6 h-6"
             fill="none"
@@ -44,23 +41,12 @@ function Navbar() {
         </button>
       </div>
       <div
-        className={`md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex flex-col items-center justify-center transform transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex flex-col items-center justify-center transform transition-transform duration-300 ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        <button className="absolute top-4 right-4" onClick={toggleSidebar}>
-          <svg
-            className="w-6 h-6 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
+        <button className="absolute top-12 right-12 rounded-full bg-gray-100 shadow-md  shadow-[#fff]" onClick={toggleSidebar}>
+          <CrossIcon />
         </button>
         {links.map((linkName) => (
           <a
@@ -72,7 +58,11 @@ function Navbar() {
             {linkName}
           </a>
         ))}
-        <a href="/login" className="text-white text-lg my-2" onClick={toggleSidebar}>
+        <a
+          href="/login"
+          className="text-white text-lg my-2"
+          onClick={toggleSidebar}
+        >
           Login
         </a>
       </div>

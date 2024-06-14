@@ -4,7 +4,13 @@
 
 
 @layer components {
+   .root-layout{
+      @apply flex flex-col justify-center text-center;
+   }
 
+   .outlet-layout{
+      @apply xl:mx-32 lg:mx-12 mx-4;
+   }
    .btn-primary {
       @apply py-3 px-8 bg-primary-dark text-white text-center rounded-[72px] cursor-pointer hover:bg-primary-dark/80 transition-colors duration-300;
    }

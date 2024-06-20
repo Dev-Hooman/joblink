@@ -4,19 +4,20 @@
 
 
 @layer components {
-   .root-layout{
+   .root-layout {
       @apply flex flex-col justify-center text-center;
    }
 
-   .outlet-layout{
+   .outlet-layout {
       @apply xl:mx-32 lg:mx-12 mx-4;
    }
+
    .btn-primary {
       @apply py-3 px-8 bg-primary-dark text-white text-center rounded-[72px] cursor-pointer hover:bg-primary-dark/80 transition-colors duration-300;
    }
 
    .main-layout {
-      @apply relative flex flex-col justify-center items-center space-y-4 pt-[289px] pb-[332px] px-[32px];
+      @apply relative flex flex-col justify-center items-center space-y-4 lg:pt-[289px] pt-[200px] lg:pb-[332px] pb-[250px] px-[32px];
    }
 
    .main-heading {
@@ -68,7 +69,7 @@
    }
 
    .pricing-card-layout .main {
-      @apply w-[450px] xl:p-[68px] lg:p-[50px] p-[68px] relative;
+      @apply lg:w-[450px] xl:p-[68px] lg:p-[50px] p-[68px] relative;
    }
 
    .pricing-card {
@@ -76,11 +77,11 @@
    }
 
    .even-card {
-      @apply bg-[#fff] lg:h-[790px] h-[740px] lg:shadow-lg;
+      @apply bg-[#fff] lg:h-[790px] h-[740px] lg:shadow-xl rounded-[42px];
    }
 
    .odd-card {
-      @apply bg-[#EBF9FF] xl:h-[700px] h-[650px];
+      @apply xl:h-[700px] h-[650px] lg:rounded-l-[42px] bg-[#EBF9FF];
    }
 
    .third-card {
@@ -126,7 +127,8 @@
 
 
 }
+
 .gradient-div {
-   
+
    background: linear-gradient(to bottom, #0748A6, #fff);
- }
+}

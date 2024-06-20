@@ -16,10 +16,17 @@ const PricingCard = ({
   return (
     <div
       className={`main pricing-card ${
-        index + 1 === 1 ? "lg:rounded-l-[42px]" : ""
-      }
-     ${index + 1 === 3 ? "lg:rounded-r-[42px]" : ""}
-    ${isEven(index) ? "even-card rounded-[42px]" : "odd-card"}`}
+        isEven(index)
+          ? "even-card"
+          : `odd-card ${
+              index + 1 === 1 &&
+              "rounded-[42px] lg:rounded-l-[42px] lg:rounded-r-none"
+            }
+            ${
+              index + 1 === 3 &&
+              "rounded-[42px] lg:rounded-r-[42px] lg:rounded-l-none"
+            }`
+      }`}
     >
       <h2 className="text-xl font-bold mb-4">{name}</h2>
       <p className="mb-4">{desc}</p>
